@@ -360,7 +360,8 @@ console.log(userObject.age); // 30
 
 ### 🌐 The optional chaining operator **`?.`**  PURPOSE:
 - Accessing a missing nested property --> throws an error:
-- `?.` stops the lookup if the value is **null** or **undefined**. 
+- `?.` stops the lookup if the value is **null** or **undefined**.
+##### object?.key
 
 ```js
 const person = { name: "Alice", age: 30 };
@@ -392,8 +393,6 @@ If a property doesn’t exist:
 ```js
 console.log(user?.profile?.phone?.number); --> undefined
 ```
-Object destructuring lets you  in a clean, compact way. It replaces repetitive property access with a single structured assignment and supports renaming, defaults, and nested extraction.
-
 ---
 
 ### What destructuring does **extract properties from an object into variables**
@@ -457,8 +456,49 @@ function createPerson(name, age) {
 console.log(createPerson("Charlie", 35));
 // { name: "Charlie", age: 35 }
 ```
+---
+# Review:
+## 🧩 Object Basics
+- JavaScript objects store data as **key–value pairs**,
+- Objects hold properties, accesed by **dot** or **bracket** **Notation**.
+---
+## 🗑 Removing Properties
+Use **delete** to remove a property.
+---
+## 🔍 Checking for Properties
+- **hasOwnProperty()** checks if the object has key.
+- **in** checks if the key exists anywhere on the object.
+---
+## 🧱 Nested Objects
+- Access by chaining.
+---
+## 🧬 Primitive vs. Non‑Primitive Types
+- **Primitive types** store **values directly** and are **copied by value**.
+- **Non‑primitive types** **references** and are **copied by reference**.
+---
+## 🧩 Object Methods Functions in objects
+---
+## 🏗 Object Constructor
+`new Object()` creates an empty object, though `{}` is preferred.
+---
+## 🛡 Optional Chaining (?.)
+- Check property exists and Prevents errors .
+---
+## 🧰 Object Destructuring
+- Extract properties into variables quickly.
 
+```js
+const person = { name: "Alice", age: 30 };
+const { name, age } = person;
 
+console.log(name); // Alice
+console.log(age);  // 30
+```
+---
+## 📦 Working with JSON -text format for storing and sending data.
 
+### Convert object → JSON string -> JSON.stringify({object})
+
+### Convert JSON string → object -->JSON.parse(`string`)
 
 
